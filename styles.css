@@ -1,1 +1,69 @@
 /*  your css code here. If applicable */
+body {
+	background: repeating-linear-gradient(
+		135deg,
+		#232323,
+		#232323 10px,
+		#343434 10px,
+		#343434 20px
+	);
+	margin: 0;
+	padding: 0;
+	font-family: 'Georgia', serif;
+}
+
+#animal-photos {
+	max-width: 950px;
+	margin: 30px auto;
+	background: #454545;
+	border-radius: 32px;
+	padding: 24px 20px 34px 20px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+#photo-heading {
+	text-align: center;
+	font-size: 2.8em;
+	letter-spacing: 2px;
+	color: #fff;
+	margin: 10px 0 30px 0;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+	margin: 0 auto;
+}
+
+.photo-grid img {
+	width: 100%;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+	border-radius: 18px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.20);
+	border: none;
+	background: #333;
+}
+
+@media (max-width: 900px) {
+	#animal-photos {
+		max-width: 98vw;
+		padding: 9vw 1vw 5vw 1vw;
+	}
+	.photo-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 18px;
+	}
+}
+@media (max-width: 600px) {
+	.photo-grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+	#photo-heading {
+		font-size: 2em;
+		margin-bottom: 18px;
+	}
+}
